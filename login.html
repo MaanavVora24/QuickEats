@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="timer.js"></script>
+   
+    <style>
+        .navbar{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display:flex;
+            justify-content: space-between;
+            font-size: large;
+            position: relative;
+            height: 50px;
+            align-items: center;
+            padding-right: 10px;
+        }
+        .icons{
+            height: 20px;
+        }
+        #onlylogo{
+            height: 50px;
+        }
+        .navan{
+            text-decoration: none;
+            color: black;
+        }
+        .navan:hover{
+            color: rgb(212, 184, 26);
+        }
+        body{
+            margin: 1px;
+        }
+
+        #main{
+            padding-top: 120px;
+            background: url('backlogin.jpg');
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            height:76vh;
+            background-blend-mode: darken ;
+        }
+        #loginbox{
+            opacity: 0.8;
+         
+            background-color: burlywood;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.16), 0px 10px 10px 0px rgba(0, 0, 0, 0.259), 0px 10px 10px 0px rgba(0, 0, 0, 0.259);
+        }
+        table{
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        th{
+            height:60px;
+        }
+        #num{
+            height: 25px;
+            width: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: #D9EDBF;
+            border: 1px rgb(153, 105, 105) ;
+        }
+        button{
+            
+            height:30px;
+            width:85px;
+            background-color: rgb(187, 156, 116);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 1px solid rgba(204, 91, 91, 0.148);
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: rgb(126, 105, 79);
+        }
+        #otp{
+            display:none;
+            position:absolute;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 34%;
+            left:3px;
+            top: 270px;
+            width: 400px;
+            text-align: center;
+            background-color: whitesmoke;
+            height:250px;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        #sub{
+            background-color: blue;
+            color: white;
+            height: 25px;
+            width: 100px;
+            border: 1px solid black;
+        }
+     </style>
+</head>
+<body id="body">
+    <div class="navbar">
+
+        <div style="display: flex; justify-content: space-between;">
+            <img id="onlylogo" src="Logo.png">
+            <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-right: 1000px;">QuickEats</p>
+        </div>
+
+        <div id="login" style="display: flex; justify-content: space-between">
+            <img class="icons" src="house-solid.svg" />
+            <a class="navan" href="FDS.html">Home</a>
+          </div>
+
+        <div id="login" style="display: flex; justify-content: space-between;"">
+            <img class="icons" src="loginlogo.png">
+            <a class="navan" href="login.html">Login</a>
+        </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <img class="icons" src="user.png">
+            <a class="navan" href="signup.html">Sign Up</a>
+        </div>
+
+       
+
+        <div style="display: flex; justify-content: space-between;">
+            <img class="icons" src="Cart.png">
+            <a class="navan" href="cart.html">Cart</a>
+        </div>
+    </div>
+    <main id="main">
+    <div id="loginbox">
+        <table>
+            <tr>
+                <th><h1 style="color:black;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Login</h1></th>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+            </tr>
+            <tr>
+                <th>
+                    <input id='num' type="number" placeholder="Enter Phone Number" required>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button id="submit" onclick="OTP()">Login</button>
+                </th>
+            </tr>
+            <tr>
+                <td><div>Don't have an account? <a href="signup.html">Create an account</a></div></td>
+            </tr>
+        </table>
+    </div>
+    <div id="otp">
+        <h2>OTP Verification</h2>
+        <h3>A 5-digit OTP code has been sent to your registered mobile number</h3>
+        <input id="num" type="number" required>
+        <br>
+        <br>
+        <button id="sub" type="submit" onclick="log()">Confirm</button>
+        <br>
+        <br>
+        <pr>Not received? Resend OTP: </pr> <pr id="seconds""></pr>
+    </div>
+    </main>
+</body>
+</html>

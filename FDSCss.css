@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display:flex;
+    justify-content: space-between;
+    font-size: large;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.navan{
+    text-decoration: none;
+    color: black;
+}
+.navan:hover{
+    color: rgb(212, 184, 26);
+}
+
+#logo{
+    text-align: center;
+}
+#logoimg{
+    height: 150px;
+    width: fit-content;
+    margin-top: 200px;
+    border-radius: 25px;
+}
+
+.icons{
+    height: 20px;
+}
+#onlylogo{
+    height: 50px;
+}
+main{
+    height: 90vh;
+    background-image: url("backmain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#title{
+    margin-top: 68vh;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.ad{
+    background-color: red;
+    height: 100vh;
+}
+#food{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    @font-face {
+        font-family: Platypi;
+        src: url('Platypi.ttf');
+    }
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.main1{
+    display: flex;
+    padding: 5px;
+    background-color: rgb(255, 166, 0);
+    
+    
+}
+.pamphlet-1{
+    background-color: #ffd400;
+    height: 80vh;
+    width: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url(Pamph1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 5px 5px 0 black , 0 -5px 5px 0 black;
+}
+.pamphlet-2{
+    background-color: bisque;
+    height: 80vh;
+    width: 320px;
+    margin-top: 20px;
+    background-image: url(Pamph2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 5px 5px 0px black, 0px -5px 5px 0 black;
+}
+.content{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110vh;
+    height: 80vh;
+    background-image: url('pasta.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 5px 5px 0px black, 0px -5px 5px 0 black;
+
+    animation-name: faded-show;
+    animation-duration: 50s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+}
+@keyframes faded-show{
+    0%{
+        background-image:url('pizza.jpg');
+    }
+    10%{
+        background-image: url('cake.jpg');
+    }
+    20%{
+        background-image: url('dessert.jpg');
+    }
+    30%{
+        background-image: url('dosa.jpg');
+    }
+    40%{
+        background-image: url('idli.jpg');
+    }
+    50%{
+        background-image: url('kebab.jpg');
+    }
+    60%{
+        background-image: url('nerfee-mirandilla-o1EDsUFmuXQ-unsplash.jpg');
+    }
+    70%{
+        background-image: url('milkshake.jpg');
+    }
+    80%{
+        background-image: url('biryani.jpg');
+    }
+    90%{
+        background-image: url('burger.jpg');
+    }
+    100%{
+        background-image: url('curry.jpg');
+    }
+}

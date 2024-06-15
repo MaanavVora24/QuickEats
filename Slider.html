@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad{
+            background-color: #ffc100;
+        }
+        #food{
+            color: red;
+            text-align: center;
+            font-size: 35px;
+            @font-face {
+                font-family: Platypi;
+                src: url('Platypi.ttf');
+            }
+            font-weight: bold;
+        }
+        .main1{
+            display: flex;
+            padding: 10px;
+            background-color: orange;
+            
+        }
+        .pamphlet-1{
+            background-color: #ffd400;
+            height: 80vh;
+            width: 320px;
+            margin-top: 20px;
+            background-image: url(Pamph1.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            box-shadow: 0 5px 5px 0 black , 0 -5px 5px 0 black;
+        }
+        .pamphlet-2{
+            background-color: bisque;
+            height: 80vh;
+            width: 320px;
+            margin-top: 20px;
+            background-image: url(Pamph2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            box-shadow: 0 5px 5px 0px black, 0px -5px 5px 0 black;
+        }
+        .content{
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 110vh;
+            height: 80vh;
+            background-image: url('pasta.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            box-shadow: 0 5px 5px 0px black, 0px -5px 5px 0 black;
+    
+
+            animation-name: faded-show;
+            animation-duration: 50s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-play-state:running;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes faded-show{
+            0%{
+                background-image:url('pizza.jpg');
+            }
+            10%{
+                background-image: url('cake.jpg');
+            }
+            20%{
+                background-image: url('dessert.jpg');
+            }
+            30%{
+                background-image: url('dosa.jpg');
+            }
+            40%{
+                background-image: url('idli.jpg');
+            }
+            50%{
+                background-image: url('kebab.jpg');
+            }
+            70%{
+                background-image: url('milkshake.jpg');
+            }
+            80%{
+                background-image: url('biryani.jpg');
+            }
+            90%{
+                background-image: url('burger.jpg');
+            }
+            100%{
+                background-image: url('curry.jpg');
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ad">
+    <p id="food">A World Of Flavor Awaits You!</p>
+    <div class="main1">
+        <div class="pamphlet-1"></div>
+        <div class="content"> </div>
+        <div class="pamphlet-2"></div>
+    </div>
+    </div>
+</body>
+</html>
